@@ -4,6 +4,12 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main {
     background-color: whitesmoke;
     display: flex;
