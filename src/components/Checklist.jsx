@@ -3,17 +3,25 @@ import React from "react";
 function Checklist() {
     return (
         <div className="checkboxes">
-            <input type="checkbox" />
-            <p>Place text here</p>
+            <div className="single-box">
+                <input type="checkbox" />
+                <p>Place text here</p>
+            </div>
 
-            <input type="checkbox" />
-            <p>Place text here</p>
+            <div className="single-box">
+                <input type="checkbox" />
+                <p>Place text here</p>
+            </div>
 
-            <input type="checkbox" />
-            <p>Place text here</p>
+            <div className="single-box">
+                <input type="checkbox" />
+                <p>Place text here</p>
+            </div>
 
-            <input type="checkbox" />
-            <p>Place text here</p>
+            <div className="single-box">
+                <input type="checkbox" />
+                <p>Place text here</p>
+            </div>
         </div>
     );
 }
