@@ -2,7 +2,7 @@ const todoItemList = [
     {
         id: 1,
         text: "Get groceries",
-        completed: false,
+        completed: true,
     },
     {
         id: 2,
