@@ -1,10 +1,11 @@
 import React from "react";
+import todoItemList from "../todoItemList";
 
-function TodoItem() {
+function TodoItem(props) {
     return (
         <div className="single-box">
             <input type="checkbox" />
-            <p>Place text here</p>
+            <p>{props.text}</p>
         </div>
     );
 }

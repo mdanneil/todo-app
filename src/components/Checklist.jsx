@@ -1,15 +1,13 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import todoItemList from "../todoItemList";
 
 function Checklist() {
-    return (
-        <div className="checklist">
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
-        </div>
-    );
+    const itemList = todoItemList.map((item) => (
+        <TodoItem key={item.id} text={item.text} completed={item.completed} />
+    ));
+
+    return <div className="checklist">{itemList}</div>;
 }
 
 export default Checklist;
