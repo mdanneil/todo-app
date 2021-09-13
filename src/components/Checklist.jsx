@@ -8,14 +8,30 @@ class Checklist extends Component {
         this.state = {
             todos: todoItemList,
         };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(id) {
+        this.setState((prevState) => {
+            const updatedTodos = prevState.todos.map((todo) => {
+                if (todo.id === id) {
+                    todo.completed = !todo.id.completed;
+                }
+                return todo;
+            });
+            return {
+                todos: updatedTodos,
+            };
+        });
+        console.log(id, "Checked");
     }
 
     render() {
         const itemList = this.state.todos.map((item) => (
             <TodoItem
                 key={item.id}
-                text={item.text}
-                completed={item.completed}
+                item={item}
+                handleChange={this.handleChange}
             />
         ));
 
